@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>animated-navigation</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <a href="#">
+
+                    <li>Home</li>
+
+                </a>
+                <a href="#">
+
+                    <li>Works</li>
+
+                </a>
+                <a href="#">
+
+                    <li>About</li>
+
+                </a>
+                <a href="#">
+
+                    <li>Contact</li>
+
+                </a>
+            </ul>
+            <div class="hamburger">
+                <div class="linia-1"></div>
+                <div class="linia-2"></div>
+                <div class="linia-3"></div>
+            </div>
+        </div>
+        <div class="logo">
+            <a href="mailto:ajarek@poczta.onet.pl">
+                <img src="logo1.PNG" alt="husky">
+        </div>
+    </div>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.navbar');
+        const listy = document.querySelectorAll('li');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('change')
+            nav.classList.toggle('change1')
+            listy.forEach(lista => {
+                lista.classList.toggle('change2')
+            })
+        })
+    </script>
+</body>
+
+</html>
